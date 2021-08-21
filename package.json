@@ -5,8 +5,8 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build && next export",
-    "gh-pages": "npm run build && npm run copy-to-gh",
-    "copy-to-gh": "rm -rf gh-pages && cp -R out gh-pages",
+    "build-static-site": "npm run build && npm run copy-to-docs",
+    "copy-to-docs": "rm -rf docs && cp -R out docs",
     "start": "next start"
   },
   "dependencies": {
