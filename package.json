@@ -5,10 +5,9 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build && next export",
-    "build-static-site": "npm run build && npm run copy-to-docs",
-    "copy-to-docs": "rm -rf docs && cp -R out docs",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "gh-pages": "npm run build && git add out/ && git commit -m \"Deploy gh-pages\" && git subtree push --prefix out origin gh-pages"
   },
   "dependencies": {
     "@material-ui/core": "^4.12.3",
