@@ -4,7 +4,9 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "next build",
+    "build": "next build && next export",
+    "gh-pages": "npm run build && npm run copy-to-gh",
+    "copy-to-gh": "rm -rf gh-pages && cp -R out gh-pages",
     "start": "next start"
   },
   "dependencies": {
